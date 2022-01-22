@@ -10,7 +10,7 @@
         <?php
             /*error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING) - funcion que nos ocultara del documento los errores, noticias y alertas */
             error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
-            /* $_POST["error"] sera la varible que se evaluara para mostrar un mensaje donde se me indique los datos ingresados no coinciden con los datos de la base de datos.
+            /* $_GET["error"] sera la varible que se evaluara para mostrar un mensaje donde se me indique los datos ingresados no coinciden con los datos de la base de datos.
                 * Esto solo servira en el caso de haber ingresado datos al formulario y no en la primera carga de la pagina. */
             if ($_GET["error"]=="si") {
                 echo "<span style='color: red; font-size:2em;'>El Usuario o contraseña son incorrectos. Verifica tus datos.</span>";
