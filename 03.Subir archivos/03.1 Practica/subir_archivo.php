@@ -1,14 +1,13 @@
 <?php
-    
-    $archivo = $_FILES["archivo_selec"]["tmp_name"];
-    $destino = "archivos/".$_FILES["archivo_selec"]["name"];
+    $archivo = $_FILES["file_up"]["tmp_name"];
+    $destino = "archivos/".$_FILES["file_up"]["name"];
 
-    if ($_FILES["archivo_selec"]["type"] === "application/vnd.ms-excel") {
-        move_uploaded_file($archivo, $destino);
-        echo "El archivo a sido subido con exito.";
+    if ($_FILES["file_up"]["type"] === "text/javascript") {
+        move_uploaded_file($archivo,  $destino);
+        echo "Archivo subido con exito";
     }
     else {
-        header("Location: enviar_archivo.php?error=true");
+        header("location: enviar_archivo.php?error=true");
     }
-    
+
 ?>

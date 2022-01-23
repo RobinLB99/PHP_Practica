@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,16 @@
     </style>
 </head>
 <body>
-    <form name="enviaArchivo" method="post" action="subir_archivo.php" enctype="multipart/form-data">
+    <form name="sentFileServer" action="subir_archivo.php" method="post" enctype="multipart/form-data">
         <?php
             error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
             if ($_GET["error"] === "true") {
-                echo "<span>Solo se puede subir achivos tipo cvs</span><br>";
+                echo "<span>Solo se puede subir archivos tipo .js<br></span>";
             }
         ?>
-        <input type="file" name="archivo_selec" id="archivo_subir">
+        <input type="file" name="file_up">
         <br><br>
-        <input type="submit" value="Subir archivo">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
