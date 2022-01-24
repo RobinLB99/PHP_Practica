@@ -12,14 +12,15 @@
     </style>
 </head>
 <body>
-    <form name="sentFileServer" action="subir_archivo.php" method="post" enctype="multipart/form-data">
+    <form name="sent_files" action="subir_archivo.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file_up">
+        <br>
         <?php
-            error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
-            if ($_GET["error"] === "true") {
-                echo "<span>Solo se puede subir archivos tipo .js<br></span>";
+        error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
+            if ($_GET["error"]==="true") {
+                echo "<span>No se puede subir este archivo. El tipo de archivo permitido es .docx</span>";
             }
         ?>
-        <input type="file" name="file_up">
         <br><br>
         <input type="submit" value="Enviar">
     </form>
