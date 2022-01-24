@@ -3,6 +3,6 @@
         foreach(arrelgo[] as varible(posicion) => varible(valor de la posicion)){ }
     */
     foreach($_FILES["subir-servidor"] as $clave => $valor) {
-        echo "Propiedad: $clave --- Valor: $valor <br>";
+        echo "<strong>$clave</strong>: ------> $valor <br>";
     }
 ?>
