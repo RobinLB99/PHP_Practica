@@ -24,5 +24,5 @@
         <br><br>
         <input type="submit" value="Enviar">
     </form>
-</body
+</body>
 </html>
